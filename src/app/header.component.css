@@ -933,23 +933,27 @@ body{
 }
 .Rsocial{
     position: relative;
+    height: 6vh;
 }
 .Rsocial1{
     position: relative;
-    left: 10%;
+    left: 9%;
+    height: 6vh;
 }
 .Rsocial2{
     position: relative;
-    left: 20%;
+    left: 18%;
+    height: 6vh;
 }
 .Rsocial3{
     position: relative;
-    left: 30%;
+    left: 26%;
+    height: 6vh;
 }
 .FooterPart{
     display: inline-flex;
     width: 100%;
-    height: 45vh;
+    height: 42vh;
     background-color: rgb(29, 29, 29);
     position: relative;
     top: 50vh;
@@ -1018,18 +1022,22 @@ body{
     top: 9.5vh;
 }
 .Rsocial4{
+    height: 6vh;
     position: relative;
-    left: 10%;
+    left: 9%;
 }
 .Rsocial5{
+    height: 6vh;
     position: relative;
-    left: 30%;
+    left: 28%;
 }
 .Rsocial6{
+    height: 6vh;
     position: relative;
-    left: 45%;
+    left: 44%;
 }
 .Rsocial7{
+    height: 6vh;
     position: relative;
-    left: 63%;
+    left: 60%;
 }
