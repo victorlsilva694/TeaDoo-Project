@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.ContainerMain{
+    display: inline-flex;
+    width: 100%;
+    height: 100vh;
+}
+.Content-Menu-Rigth{
+    width: 22%;
+    height: 100vh;
+    background-color: rgb(241, 241, 241);
+}
+.UserDefinition{
+    display: inline-flex;
+    position: relative;
+    top: 4vh;
+    width: 100%;
+    height: 16vh;
+}
+.UsrImage{
+    display: inline-flex;
+    position: relative;
+    top: 0vh;
+    left: 5%;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+}
+.userImage{
+    width: 100%;
+
+}
+.UsrSeparation{
+    position: relative;
+    top: 3vh;
+    color: rgb(229, 229, 229);
+}
+.UsrSeparation2{
+    position: relative;
+    top: 3vh;
+    color: rgb(250, 250, 250);
+}
+.userImage:hover{
+    cursor: pointer;
+    opacity: 0.85;
+}
+.UserName{
+    position: relative;
+    left: 13%;
+    top: 1.5vh;
+    width: 50%;
+    height: 10vh;
+}
+.Buttons-Menu{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    top: 5vh;
+}
+#Buttons-Icons{
+    display: inline-flex;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    height: 9vh;
+    border: none;
+    text-align: left;
+    border-radius: 10px 10px 10px 10px;
+}
+#Buttons-Icons:hover{
+    background-color: rgb(200, 200, 200);
+}
+.img-Friend{
+    position: relative;
+    left: 7%;
+    top: 1vh;
+    width: 50px;
+    height: 50px;
+}
+.FriendsBtn{
+    font-family: 'Lato';
+    top: 3vh;
+    position: relative;
+    left: 15%;
+    font-weight: 400;
+    font-size: 22px;
+}
