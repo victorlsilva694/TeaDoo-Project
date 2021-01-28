@@ -23,5 +23,4 @@ function validar(){
         MsgError.style.fontFamily = "sans-serif";
         MsgError.style.fontSize = "17px";
     }
-
 }

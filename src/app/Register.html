@@ -13,67 +13,69 @@
 <body>
 
     <div class="Container-Main">
-        <h1 class="T1">Tea<span class="T2">Doo</span></h1>
-        <div class="Containers-Inputs">
-            <div class="Form-Register-P1">
-                <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                    <input id="NameUser"
-                        style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
-                        type="text" class="form-control" id="floatingInput" placeholder="Nome">
-                    <label for="floatingInput">Nome</label>
+        <form action="Register.php" method="POST">
+            <h1 class="T1">Tea<span class="T2">Doo</span></h1>
+            <div class="Containers-Inputs">
+                <div class="Form-Register-P1">
+                    <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
+                        <input id="NameUser" name="Nome"
+                            style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
+                            type="text" class="form-control" id="floatingInput" placeholder="Nome">
+                        <label for="floatingInput">Nome</label>
+                    </div>
+                </div>
+                <div class="Form-Register-P2">
+                    <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
+                        <input id="LastNameUser" name="SobreNome"
+                            style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
+                            type="text" class="form-control" id="floatingInput" placeholder="SobreNome">
+                        <label for="floatingInput">SobreNome</label>
+                    </div>
                 </div>
             </div>
-            <div class="Form-Register-P2">
+
+            <div class="Container-C2">
                 <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                    <input id="LastNameUser"
+                    <input id="ExibName" name="UserName"
                         style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
-                        type="text" class="form-control" id="floatingInput" placeholder="SobreNome">
-                    <label for="floatingInput">SobreNome</label>
+                        type="text" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
+                    <label for="floatingInput">Nome de exibição</label>
                 </div>
             </div>
-        </div>
 
-        <div class="Container-C2">
-            <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                <input id="ExibName"
-                    style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
-                    type="text" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
-                <label for="floatingInput">Nome de exibição</label>
+            <div class="Container-C3">
+                <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
+                    <input id="EmailUser"
+                        style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
+                        type="email" name="email" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
+                    <label for="floatingInput">Email</label>
+                </div>
             </div>
-        </div>
 
-        <div class="Container-C3">
-            <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                <input id="EmailUser"
-                    style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
-                    type="email" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
-                <label for="floatingInput">Email</label>
+            <div class="Container-C4">
+                <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
+                    <input id="Passwd-User"
+                        style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
+                        type="password" name="senha" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
+                    <label for="floatingInput">Senha</label>
+                </div>
             </div>
-        </div>
 
-        <div class="Container-C4">
-            <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                <input id="Passwd-User"
-                    style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
-                    type="password" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
-                <label for="floatingInput">Senha</label>
+            <div class="Container-C5">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label style="color: rgb(126, 126, 126);" class="form-check-label" for="defaultCheck1">
+                        Eu li e aceito os
+                    </label>
+                    <a class="TermosDeUso" href="#">Termos de uso</a>
+                </div>
             </div>
-        </div>
-        
-        <div class="Container-C5">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label style="color: rgb(126, 126, 126);" class="form-check-label" for="defaultCheck1">
-                  Eu li e aceito os 
-                </label> 
-                <a class="TermosDeUso" href="#">Termos de uso</a>
-              </div>
-        </div>
-        <div id="ErrorMessage"></div>
-        
-        <div class="Container-C6">
-            <button id="BtnEnv" onclick="validar()" type="submit">Cadastrar</button>
-        </div>
+            <div id="ErrorMessage"></div>
+
+            <div class="Container-C6">
+                <button id="BtnEnv" onclick="validar()" type="submit">Cadastrar</button>
+            </div>
+        </form>
     </div>
 
 
