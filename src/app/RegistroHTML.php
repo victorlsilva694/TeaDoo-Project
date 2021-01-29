@@ -1,3 +1,23 @@
+<?php
+
+    if(!isset($Nome)){
+        $Nome = "";
+    }
+    if(!isset($SobreNome)){
+        $SobreNome = "";
+    }
+    if(!isset($NomeUsuario)){
+        $NomeUsuario = "";
+    }
+    if(!isset($Email)){
+        $Email = "";
+    }
+    if(!isset($Senha)){
+        $Senha = "";
+    }
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +38,7 @@
             <div class="Containers-Inputs">
                 <div class="Form-Register-P1">
                     <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                        <input id="NameUser" name="Nome"
+                        <input id="NameUser" name="Nome" value="<?php echo htmlspecialchars($Nome) ?>"
                             style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
                             type="text" class="form-control" id="floatingInput" placeholder="Nome">
                         <label for="floatingInput">Nome</label>
@@ -26,7 +46,7 @@
                 </div>
                 <div class="Form-Register-P2">
                     <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                        <input id="LastNameUser" name="SobreNome"
+                        <input id="LastNameUser" name="SobreNome" value="<?php echo htmlspecialchars($SobreNome) ?>"
                             style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
                             type="text" class="form-control" id="floatingInput" placeholder="SobreNome">
                         <label for="floatingInput">SobreNome</label>
@@ -36,7 +56,7 @@
 
             <div class="Container-C2">
                 <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                    <input id="ExibName" name="UserName"
+                    <input id="ExibName" name="UserName" value="<?php echo htmlspecialchars($NomeUsuario) ?>"
                         style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
                         type="text" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
                     <label for="floatingInput">Nome de exibição</label>
@@ -45,7 +65,7 @@
 
             <div class="Container-C3">
                 <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                    <input id="EmailUser"
+                    <input id="EmailUser" value="<?php echo htmlspecialchars($Email) ?>"
                         style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
                         type="email" name="email" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
                     <label for="floatingInput">Email</label>
@@ -54,7 +74,7 @@
 
             <div class="Container-C4">
                 <div class="form-floating mb-3" style="color: rgb(255, 255, 255);">
-                    <input id="Passwd-User"
+                    <input id="Passwd-User" value="<?php echo htmlspecialchars($Senha) ?>"
                         style="background-color: transparent; border: none; border-bottom: 3px solid rgb(0, 170, 127); color: rgb(255, 255, 255)"
                         type="password" name="senha" class="form-control" id="floatingInput" placeholder="@SeuUsuário">
                     <label for="floatingInput">Senha</label>
@@ -70,10 +90,17 @@
                     <a class="TermosDeUso" href="#">Termos de uso</a>
                 </div>
             </div>
-            <div id="ErrorMessage"></div>
+            <div id="ErrorMessage">
+
+                <?php 
+                    if(isset($Error)){ ?>
+                    <p class="PhpError"> <?php echo $Error ?> </p>
+                <?php } ?>
+
+            </div>
 
             <div class="Container-C6">
-                <button id="BtnEnv" onclick="validar()" type="submit">Cadastrar</button>
+                <button id="BtnEnv" type="submit">Cadastrar</button>
             </div>
         </form>
     </div>

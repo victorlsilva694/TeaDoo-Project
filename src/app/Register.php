@@ -3,34 +3,42 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $Nome = $_POST["Nome"];
-    $SobreNome = $_POST["SobreNome"]; 
-    $NomeUsuario = $_POST["UserName"];
-    $Email = $_POST["email"];
-    $Senha = $_POST["senha"];
+    $Nome = filter_input(INPUT_POST, 'Nome');
+    $SobreNome = filter_input(INPUT_POST, 'SobreNome'); 
+    $NomeUsuario = filter_input(INPUT_POST, 'UserName');
+    $Email = filter_input(INPUT_POST, 'email');
+    $Senha = filter_input(INPUT_POST, 'senha');
 
 
     $conn = new PDO("mysql:host=$servername;dbname=TeaDoo", $username, $password);
 
-    if($Nome == "")
+    if(empty($Nome))
     {
-        echo "<p class='Erro'>Erro</p>";
+        $Error = "Confira os campos e tente novamente!";
     }
-    else if($SobreNome == "")
-    {
-        echo "<p class='Erro'>Erro</p>";
+    else if(strlen($Nome) < 3){
+        $Error = "Confira os campos e tente novamente!";
     }
-    else if($NomeUsuario == "")
+    if(empty($SobreNome))
     {
-        echo "<p class='Erro'>Erro</p>";
+        $Error = "Confira os campos e tente novamente!";
     }
-    else if($Email == "")
-    {
-        echo "<p class='Erro'>Erro</p>";
+    else if(strlen($SobreNome) < 3){
+        $Error = "Confira os campos e tente novamente!";
     }
-    else if($Senha == "")
+    if(empty($NomeUsuario))
     {
-        echo "<p class='Erro'>Erro</p>";
+        $Error = "Confira os campos e tente novamente!";
+    }
+    else if(strlen($NomeUsuario) < 3){
+        $Error = "Confira os campos e tente novamente!";
+    }
+    if(empty($Senha))
+    {
+        $Error = "Confira os campos e tente novamente!";
+    }
+    else if(strlen($Senha) < 12){
+        $Error = "Confira os campos e tente novamente!";
     }
     else{
         try 
@@ -40,7 +48,6 @@
             $sql = "INSERT INTO Usuarios (Nome, SobreNome, UserName, Email, Senha)
             VALUES ('$Nome', '$SobreNome', '$NomeUsuario', '$Email', '$Senha')";
             $conn->exec($sql);
-            echo "New record created successfully";
         } 
         catch(PDOException $e)
         {
@@ -48,4 +55,11 @@
         }
     }
     $conn = null;
+
+    if(empty($Error)){
+        include('login.html');
+    }
+    else{
+        include('RegistroHTML.php');
+    }
 ?>

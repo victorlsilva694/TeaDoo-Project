@@ -1,11 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-:root {
-    --primary-color: rgb(1, 143, 107);
-    --bg-color: #130f0d;
-    --text-color: #f0f0f5;
-    --light-color: rgba(255, 255, 255, 0.04);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-color: #130f0d;
+    background-color: #131313;
     color: #f0f0f5;
 }
 
