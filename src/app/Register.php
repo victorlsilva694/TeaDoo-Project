@@ -57,7 +57,7 @@
     $conn = null;
 
     if(empty($Error)){
-        include('login.html');
+        include('login.php');
     }
     else{
         include('RegistroHTML.php');

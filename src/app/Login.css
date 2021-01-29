@@ -87,7 +87,7 @@ button {
 button {
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 80px;
     background-color: var(--primary-color);
 }
 
@@ -124,4 +124,8 @@ input:valid ~ label {
 .T2{
     color: rgb(1, 143, 107);
     font-family: 'Alfa Slab One';
+}
+.ErrorMessage{
+    background-color: red;
+    width: 50px;
 }
