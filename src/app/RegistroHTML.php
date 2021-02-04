@@ -94,7 +94,7 @@
 
                 <?php 
                     if(isset($Error)){ ?>
-                    <p class="PhpError"> <?php echo $Error ?> </p>
+                    <p> <?php echo $Error ?> </p>
                 <?php } ?>
 
             </div>

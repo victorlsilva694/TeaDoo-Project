@@ -28,13 +28,11 @@
         <div class="Content-Menu-Rigth">
 
             <div class="UserDefinition">
-
                 <div class="UsrImage">
                     <img class="userImage" src="img/Captura de ecrã no 2021-01-17 05-35-38.png" alt="">
                 </div>
                 <!-- { Essa div vazia é para pegar o nome do usuario pelo javascript com appendChild } -->
-                <p class="UserName">Lara Silva</p> <br>
-
+                <div class="UserName"></div>
             </div>
             <hr class="UsrSeparation">
 
@@ -60,64 +58,8 @@
                     <span class="FriendsBtn">Responder</span>
                 </button>
             </div>
-
-            <div class="Menu-Left-Footer">
-                <button id="BtnLogout">Logout</button>
-            </div>
+            <hr class="UsrSeparation2">
         </div>
-
-        <div class="DashBoard-Right">
-
-            <div class="DashBoard-Right-Menu">
-                <img class="Search-Image" src="img/search.png">
-                <input type="text" id="Input-Search-Menu">
-
-                <img class="Notification-Bell" src="/img/bell.png" alt="">
-
-                <img class="Message-Friends" src="img/chat.png" alt="">
-
-                <img class="Img-Menu" src="img/menu.png" alt="">
-
-                <img class="Configuration-DeashBoard" src="img/gear.png" alt="">
-            </div>
-
-            <div class="Comunidades">
-                <p class="Titulo-Comunidade-Dois">Comunidades</p>
-
-                <p class="VerTodas">Ver Todas</p>
-
-                <div class="ComunidadeUm">
-                    <div class="Image-Comunidade">
-                        <img class="img-Comunidade1" src="img/technical-drawing-3324368_960_720.jpg" alt="">
-                        <p class="Item-Img-Comunidade">Engenharia</p>
-                    </div>
-                </div>
-
-                <div class="ComunidadeDois">
-                    <div class="Image-Comunidade">
-                        <img class="img-Comunidade1" src="img/analysis-2030265_640.jpg" alt="">
-                        <p class="Item-Img-Comunidade">Medicina</p>
-                    </div>
-                </div>
-
-                <div class="ComunidadeTres">
-                    <div class="Image-Comunidade">
-                        <img class="img-Comunidade1" src="img/library-869061_640.jpg" alt="">
-                        <p class="Item-Img-Comunidade">Direito</p>
-                    </div>
-                </div>
-
-                <div class="ComunidadeQuatro">
-                    <div class="Image-Comunidade">
-                        <img class="img-Comunidade1" src="img/dental-2450751_640.jpg" alt="">
-                        <p class="Item-Img-Comunidade">Odontologia</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
 
     </div>
 
